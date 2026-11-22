@@ -1,0 +1,22 @@
+[
+  {
+    "mutation": "quantity_zero",
+    "killed": true,
+    "output": "--- FAIL: TestCreateBusinessBoundaries (0.00s)\n    --- FAIL: TestCreateBusinessBoundaries/zero (0.00s)\n        service_unit_test.go:46: success=true want=false error=<nil>\nFAIL\nFAIL\tsirius.local/food/internal/orders\t0.426s\nFAIL\n"
+  },
+  {
+    "mutation": "exact_balance",
+    "killed": true,
+    "output": "--- FAIL: TestCreateBusinessBoundaries (0.00s)\n    --- FAIL: TestCreateBusinessBoundaries/exact_balance (0.00s)\n        service_unit_test.go:46: success=false want=true error=\u041d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0441\u0440\u0435\u0434\u0441\u0442\u0432\nFAIL\nFAIL\tsirius.local/food/internal/orders\t0.343s\nFAIL\n"
+  },
+  {
+    "mutation": "availability",
+    "killed": true,
+    "output": "--- FAIL: TestCreateBusinessBoundaries (0.00s)\n    --- FAIL: TestCreateBusinessBoundaries/exact_balance (0.00s)\n        service_unit_test.go:46: success=false want=true error=\u0411\u043b\u044e\u0434\u043e \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\n    --- FAIL: TestCreateBusinessBoundaries/unavailable (0.00s)\n        service_unit_test.go:46: success=true want=false error=<nil>\n    --- FAIL: TestCreateBusinessBoundaries/normal (0.00s)\n        service_unit_test.go:46: success=false want=true error=\u0411\u043b\u044e\u0434\u043e \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\nFAIL\nFAIL\tsirius.local/food/internal/orders\t0.454s\nFAIL\n"
+  },
+  {
+    "mutation": "blocked_user",
+    "killed": true,
+    "output": "--- FAIL: TestCreateBusinessBoundaries (0.00s)\n    --- FAIL: TestCreateBusinessBoundaries/exact_balance (0.00s)\n        service_unit_test.go:46: success=false want=true error=\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\n    --- FAIL: TestCreateBusinessBoundaries/blocked (0.00s)\n        service_unit_test.go:46: success=true want=false error=<nil>\n    --- FAIL: TestCreateBusinessBoundaries/normal (0.00s)\n        service_unit_test.go:46: success=false want=true error=\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\nFAIL\nFAIL\tsirius.local/food/internal/orders\t0.242s\nFAIL\n"
+  }
+]

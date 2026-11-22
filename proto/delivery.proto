@@ -1,0 +1,19 @@
+syntax="proto3";
+package delivery;
+option go_package="sirius.local/food/internal/deliverypb";
+service DeliveryService {
+ rpc AssignCourier(AssignCourierRequest)returns(AssignCourierResponse);
+ rpc CompleteDelivery(CompleteDeliveryRequest)returns(CompleteDeliveryResponse);
+ rpc GetDelivery(GetDeliveryRequest)returns(GetDeliveryResponse);
+ rpc TrackDelivery(TrackDeliveryRequest)returns(stream DeliveryStatus);
+ rpc ChatWithCourier(stream ChatMessage)returns(stream ChatMessage);
+}
+message AssignCourierRequest{int64 order_id=1;int64 courier_id=2;int64 actor_id=3;}
+message AssignCourierResponse{int64 delivery_id=1;string status=2;}
+message CompleteDeliveryRequest{int64 delivery_id=1;int64 actor_id=2;}
+message CompleteDeliveryResponse{string status=1;}
+message GetDeliveryRequest{int64 order_id=1;int64 actor_id=2;}
+message GetDeliveryResponse{int64 id=1;string status=2;int64 courier_id=3;int64 order_id=4;}
+message TrackDeliveryRequest{int64 order_id=1;int64 actor_id=2;}
+message DeliveryStatus{int64 order_id=1;string status=2;bool simulated=3;}
+message ChatMessage{int64 order_id=1;int64 actor_id=2;string text=3;string sender=4;}

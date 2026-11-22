@@ -1,0 +1,1 @@
+{"event_id":"contract-example","type":"order.paid","order_id":42,"user_id":7,"amount":150.00,"correlation_id":"contract-order-42"}

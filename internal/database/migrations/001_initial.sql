@@ -1,0 +1,5 @@
+CREATE TABLE users(id BIGSERIAL PRIMARY KEY,email TEXT UNIQUE NOT NULL,phone TEXT NOT NULL DEFAULT '',balance_cents BIGINT NOT NULL DEFAULT 0 CHECK(balance_cents>=0),is_blocked BOOLEAN NOT NULL DEFAULT false);
+CREATE TABLE menu_items(id BIGSERIAL PRIMARY KEY,name TEXT UNIQUE NOT NULL,price_cents BIGINT NOT NULL CHECK(price_cents>0),is_available BOOLEAN NOT NULL DEFAULT true,category_id BIGINT NOT NULL DEFAULT 1);
+CREATE TABLE orders(id BIGSERIAL PRIMARY KEY,user_id BIGINT NOT NULL REFERENCES users(id),item_id BIGINT NOT NULL REFERENCES menu_items(id),quantity BIGINT NOT NULL CHECK(quantity>0),status TEXT NOT NULL DEFAULT 'processing',total_cents BIGINT NOT NULL,created_at TIMESTAMPTZ NOT NULL DEFAULT now());
+CREATE TABLE deliveries(id BIGSERIAL PRIMARY KEY,order_id BIGINT UNIQUE NOT NULL REFERENCES orders(id),courier_id BIGINT NOT NULL REFERENCES users(id),status TEXT NOT NULL DEFAULT 'in_progress');
+CREATE UNIQUE INDEX courier_active ON deliveries(courier_id) WHERE status='in_progress';

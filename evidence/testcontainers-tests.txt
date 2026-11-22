@@ -1,0 +1,198 @@
+?   	sirius.local/food/cmd/api	[no test files]
+?   	sirius.local/food/cmd/delivery	[no test files]
+?   	sirius.local/food/cmd/demo	[no test files]
+?   	sirius.local/food/cmd/events	[no test files]
+?   	sirius.local/food/cmd/grpcdemo	[no test files]
+?   	sirius.local/food/cmd/launcher	[no test files]
+?   	sirius.local/food/cmd/scheduler	[no test files]
+?   	sirius.local/food/cmd/seed	[no test files]
+?   	sirius.local/food/cmd/worker	[no test files]
+2026/11/22 12:32:08 github.com/testcontainers/testcontainers-go - Connected to docker: 
+  Server Version: 29.8.2
+  API Version: 1.51
+  Operating System: OrbStack
+  Total Memory: 3986 MB
+  Testcontainers for Go Version: v0.39.0
+  Resolved Docker Host: unix:///var/run/docker.sock
+  Resolved Docker Socket Path: /var/run/docker.sock
+  Test SessionID: 8b6f41aead5892ccda3d07aa428c2ee5ba0919cde16de313b60df77e874baeca
+  Test ProcessID: dc99a91c-9e15-453b-b95d-4837e73f32db
+2026/11/22 12:32:08 🐳 Creating container for image postgres:15-alpine
+2026/11/22 12:32:08 No image auth found for https://index.docker.io/v1/. Setting empty credentials for the image: testcontainers/ryuk:0.13.0. This is expected for public images. Details: credentials not found in native keychain
+2026/11/22 12:32:24 🐳 Creating container for image testcontainers/ryuk:0.13.0
+2026/11/22 12:32:24 ✅ Container created: 6fef99174011
+2026/11/22 12:32:24 🐳 Starting container: 6fef99174011
+2026/11/22 12:32:24 ✅ Container started: 6fef99174011
+2026/11/22 12:32:24 ⏳ Waiting for container id 6fef99174011 image: testcontainers/ryuk:0.13.0. Waiting for: &{Port:8080/tcp timeout:<nil> PollInterval:100ms skipInternalCheck:false skipExternalCheck:false}
+2026/11/22 12:32:24 Shell not found in container
+2026/11/22 12:32:24 🔔 Container is ready: 6fef99174011
+2026/11/22 12:32:24 ✅ Container created: 38ae717416fc
+2026/11/22 12:32:24 🐳 Starting container: 38ae717416fc
+2026/11/22 12:32:25 ✅ Container started: 38ae717416fc
+2026/11/22 12:32:25 ⏳ Waiting for container id 38ae717416fc image: postgres:15-alpine. Waiting for: &{timeout:0x586f86ae0128 Log:database system is ready to accept connections IsRegexp:false Occurrence:2 PollInterval:100ms check:<nil> submatchCallback:<nil> re:<nil> log:[]}
+2026/11/22 12:32:27 🔔 Container is ready: 38ae717416fc
+2026/11/22 12:32:27 🐳 Creating container for image redis:7-alpine
+2026/11/22 12:32:27 ✅ Container created: cd1126a9958a
+2026/11/22 12:32:27 🐳 Starting container: cd1126a9958a
+2026/11/22 12:32:27 ✅ Container started: cd1126a9958a
+2026/11/22 12:32:27 ⏳ Waiting for container id cd1126a9958a image: redis:7-alpine. Waiting for: &{Port:6379/tcp timeout:<nil> PollInterval:100ms skipInternalCheck:false skipExternalCheck:false}
+2026/11/22 12:32:27 🔔 Container is ready: cd1126a9958a
+=== RUN   TestCacheWarmupTTLInvalidation
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:27 {"event":"http_request","correlation_id":"fc4ac7d01069b234e9bd831f3589b90d","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /menu/categories/{id}","status":200,"duration_ms":0.587}
+2026/11/22 12:32:27 {"event":"http_request","correlation_id":"8f15c2c98d05bb68aaa41d930ab679af","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /menu/categories/{id}","status":200,"duration_ms":0.476}
+2026/11/22 12:32:27 {"event":"http_request","correlation_id":"4da15128101efcf83ea8baa74108a715","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":3.362}
+2026/11/22 12:32:27 {"event":"http_request","correlation_id":"72989c4cd159b9036b41fa4276fc70cc","trace_id":"00000000000000000000000000000000","method":"PATCH","route":"PATCH /menu/items/{id}","status":200,"duration_ms":1.805}
+--- PASS: TestCacheWarmupTTLInvalidation (0.09s)
+=== RUN   TestCacheStampede
+Демо-данные готовы; пароль: SiriusDemo2026!
+--- PASS: TestCacheStampede (0.10s)
+=== RUN   TestRedisFallback
+Демо-данные готовы; пароль: SiriusDemo2026!
+redis: 2026/11/22 12:32:28 pool.go:770: redis: connection pool: failed to dial after 5 attempts: dial tcp 127.0.0.1:1: connect: connection refused
+2026/11/22 12:32:28 Redis fallback: dial tcp 127.0.0.1:1: connect: connection refused
+--- PASS: TestRedisFallback (0.50s)
+=== RUN   TestJobsIdempotency
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:28 EFFECT job=1 kind=sms order=1
+--- PASS: TestJobsIdempotency (0.21s)
+=== RUN   TestJobsRetryArchiveAndDLQ
+Демо-данные готовы; пароль: SiriusDemo2026!
+asynq: pid=28050 2026/11/22 09:32:28.434630 INFO: Starting processing
+2026/11/22 12:32:29 EFFECT job=1 kind=sms order=1
+asynq: pid=28050 2026/11/22 09:32:35.078919 WARN: Retry exhausted for task id=9e785880-c11b-4a34-b46f-08a1f0c2086c
+asynq: pid=28050 2026/11/22 09:32:35.123941 INFO: Starting graceful shutdown
+asynq: pid=28050 2026/11/22 09:32:35.129225 INFO: Waiting for all workers to finish...
+asynq: pid=28050 2026/11/22 09:32:35.129250 INFO: All workers have finished
+asynq: pid=28050 2026/11/22 09:32:35.132013 INFO: Exiting
+--- PASS: TestJobsRetryArchiveAndDLQ (6.84s)
+=== RUN   TestScheduledStatisticsHandler
+Демо-данные готовы; пароль: SiriusDemo2026!
+--- PASS: TestScheduledStatisticsHandler (0.19s)
+=== RUN   TestRPCStreamsAndInternalKey
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:35 AssignCourier order=1 courier=4 actor=3
+--- PASS: TestRPCStreamsAndInternalKey (0.14s)
+=== RUN   TestRPCErrors
+--- PASS: TestRPCErrors (0.02s)
+=== RUN   TestHTTPServiceUnavailable
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"4696acdebcd374726025693c726145e3","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":2.514}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"9cdfa01fd486fcae68036dc5cde3c293","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /delivery/orders/{id}","status":503,"duration_ms":0.405}
+--- PASS: TestHTTPServiceUnavailable (0.11s)
+=== RUN   TestAuthPermissions
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"5c1ed699911daef4d11fddc69fd313eb","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":3.227}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"e9849362617bdecef9d037b365c63812","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":2.546}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"28854d6794cfd9b94e1d7bfb45ebc859","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/create","status":401,"duration_ms":0.016}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"97ede236ea3ce41180cc6c81593ae435","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /orders/kitchen/orders","status":403,"duration_ms":0.306}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"881dfdb615f9d997bdba23e7ab35aff7","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/create","status":200,"duration_ms":2.533}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"90fa9e7f805f2c81b6b72cd328f6ab76","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/{id}/cancel","status":403,"duration_ms":0.638}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"8d8e9644d60d15d8c987d42bd882ea64","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /orders/{id}","status":200,"duration_ms":0.409}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"e9ab841c2795121ab013da53b5d59d2e","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /users/{id}/topup","status":403,"duration_ms":0.499}
+--- PASS: TestAuthPermissions (0.09s)
+=== RUN   TestRateLimit
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"4f0452882c7b78070a9a0d61d51a370d","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":401,"duration_ms":0.539}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"04ff993281bb10907a70b9da4f2d1c74","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":401,"duration_ms":0.253}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"145ef9dc6720fc5bd3e1fe4906c18596","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":401,"duration_ms":0.251}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"9095de6b4d5406bf6d7817e09400aa62","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":401,"duration_ms":0.227}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"4571f49cd83efd9c9989f238466114c9","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":401,"duration_ms":0.250}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"ee4c2e94da5a1604991c6a1e92c4f7ee","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":429,"duration_ms":0.112}
+--- PASS: TestRateLimit (0.08s)
+=== RUN   TestRefreshReplay
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"1547de106c4dbfe874efb5cd32a2b0cd","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":3.215}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"e0e868a15579434612a8b3561a998d28","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/refresh","status":200,"duration_ms":2.083}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"8b35a9f3113bb6bfaa8bd3aad3d23052","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/refresh","status":401,"duration_ms":1.749}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"6a13583278bd2c5f0b69f76009237e9e","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /users/me","status":401,"duration_ms":0.302}
+--- PASS: TestRefreshReplay (0.09s)
+=== RUN   TestPasswordHashAndRole
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"82323369f09bab0975f8ae4f1692551d","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /users/register","status":200,"duration_ms":3.352}
+2026/11/22 12:32:35 {"event":"http_request","correlation_id":"9263032cce9d909ca7921e0e40b40f00","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /users/register","status":400,"duration_ms":0.033}
+--- PASS: TestPasswordHashAndRole (0.09s)
+=== RUN   TestRefundOnlyOnce
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"511c9e95f29542ffee1a782201f3e9c9","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":3.055}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"e677ddcfbda2a891794e6a8836344beb","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /users/me","status":200,"duration_ms":0.327}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"3c613c9511bbe0a850223d550e31da7e","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/create","status":200,"duration_ms":2.085}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"058b21521bc5e4ed36f2e360e69f54ac","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/{id}/cancel","status":200,"duration_ms":1.309}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"932461e03cd698c6815f98bbc4aaa946","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/{id}/cancel","status":400,"duration_ms":0.369}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"919916b5618f2e3875e30f9e7c918e99","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /users/me","status":200,"duration_ms":0.101}
+--- PASS: TestRefundOnlyOnce (0.10s)
+=== RUN   TestProductionDocsDisabled
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"287cc0eda13618cbe04dd3a11904c183","trace_id":"00000000000000000000000000000000","method":"GET","route":"unmatched","status":404,"duration_ms":0.005}
+--- PASS: TestProductionDocsDisabled (0.10s)
+=== RUN   TestDeliveryOwnership
+Демо-данные готовы; пароль: SiriusDemo2026!
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"6499b75398045655b7650c4470b92f4d","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":2.608}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"902fe61de7390db5ac5914df58d50e62","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":1.927}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"754f0182496fd0a738f1b418172cbcf5","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":1.925}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"961c31ef6e74c0752b8225094ded0b25","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":1.785}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"73ef6fec311f3f03aa5493ef6ab4e4d6","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /auth/login","status":200,"duration_ms":1.859}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"58b3aae04e092d39a1b01702ba3677a2","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/create","status":200,"duration_ms":1.820}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"3eabb28d380e03682847a1f8370d0c38","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /orders/{id}/paid","status":200,"duration_ms":1.739}
+2026/11/22 12:32:36 AssignCourier order=1 courier=4 actor=3
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"6c64f0d66e099538c4d7e39fbc7a84e2","trace_id":"00000000000000000000000000000000","method":"POST","route":"POST /delivery/assign","status":200,"duration_ms":2.051}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"6a7408502f6531e36e3708b533b3ef2d","trace_id":"00000000000000000000000000000000","method":"GET","route":"GET /delivery/orders/{id}","status":403,"duration_ms":0.583}
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"e060e225808548f9a8a6110268b8b03b","trace_id":"00000000000000000000000000000000","method":"PATCH","route":"PATCH /delivery/{id}/complete","status":403,"duration_ms":0.527}
+2026/11/22 12:32:36 CompleteDelivery id=1 actor=4
+2026/11/22 12:32:36 {"event":"http_request","correlation_id":"cd2f21f17bcf3a164de75669c5816570","trace_id":"00000000000000000000000000000000","method":"PATCH","route":"PATCH /delivery/{id}/complete","status":200,"duration_ms":1.605}
+--- PASS: TestDeliveryOwnership (0.11s)
+PASS
+2026/11/22 12:32:36 🐳 Stopping container: cd1126a9958a
+2026/11/22 12:32:36 ✅ Container stopped: cd1126a9958a
+2026/11/22 12:32:36 🐳 Terminating container: cd1126a9958a
+2026/11/22 12:32:36 🚫 Container terminated: cd1126a9958a
+2026/11/22 12:32:36 🐳 Stopping container: 38ae717416fc
+2026/11/22 12:32:36 ✅ Container stopped: 38ae717416fc
+2026/11/22 12:32:36 🐳 Terminating container: 38ae717416fc
+2026/11/22 12:32:36 🚫 Container terminated: 38ae717416fc
+ok  	sirius.local/food/internal/app	28.780s
+?   	sirius.local/food/internal/auth	[no test files]
+?   	sirius.local/food/internal/config	[no test files]
+?   	sirius.local/food/internal/database	[no test files]
+?   	sirius.local/food/internal/delivery	[no test files]
+?   	sirius.local/food/internal/deliverypb	[no test files]
+?   	sirius.local/food/internal/docs	[no test files]
+=== RUN   TestMoney
+--- PASS: TestMoney (0.00s)
+PASS
+ok  	sirius.local/food/internal/domain	1.459s
+=== RUN   TestOrderPaidMessageContract
+--- PASS: TestOrderPaidMessageContract (0.00s)
+PASS
+ok  	sirius.local/food/internal/eda	1.091s
+?   	sirius.local/food/internal/jobs	[no test files]
+?   	sirius.local/food/internal/menu	[no test files]
+?   	sirius.local/food/internal/observe	[no test files]
+=== RUN   TestCreateBusinessBoundaries
+=== RUN   TestCreateBusinessBoundaries/zero
+=== RUN   TestCreateBusinessBoundaries/negative
+=== RUN   TestCreateBusinessBoundaries/too_many
+=== RUN   TestCreateBusinessBoundaries/exact_balance
+=== RUN   TestCreateBusinessBoundaries/insufficient
+=== RUN   TestCreateBusinessBoundaries/unavailable
+=== RUN   TestCreateBusinessBoundaries/blocked
+=== RUN   TestCreateBusinessBoundaries/normal
+--- PASS: TestCreateBusinessBoundaries (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/zero (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/negative (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/too_many (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/exact_balance (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/insufficient (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/unavailable (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/blocked (0.00s)
+    --- PASS: TestCreateBusinessBoundaries/normal (0.00s)
+=== RUN   TestCancelRefundOnce
+--- PASS: TestCancelRefundOnce (0.00s)
+PASS
+ok  	sirius.local/food/internal/orders	1.925s
+?   	sirius.local/food/internal/rpcdelivery	[no test files]
+?   	sirius.local/food/internal/transport	[no test files]
+=== RUN   TestServiceWithMemoryRepository
+--- PASS: TestServiceWithMemoryRepository (0.00s)
+PASS
+ok  	sirius.local/food/internal/users	2.274s

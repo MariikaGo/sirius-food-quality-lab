@@ -1,0 +1,1 @@
+CREATE TABLE task_logs(id BIGSERIAL PRIMARY KEY,order_id BIGINT NOT NULL REFERENCES orders(id),kind TEXT NOT NULL CHECK(kind IN('pdf','email','sms')),state TEXT NOT NULL DEFAULT 'pending',attempts INT NOT NULL DEFAULT 0,result TEXT NOT NULL DEFAULT '',created_at TIMESTAMPTZ NOT NULL DEFAULT now(),updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),UNIQUE(order_id,kind));
