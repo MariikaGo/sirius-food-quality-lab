@@ -53,3 +53,15 @@ func (h Handler) Update(w http.ResponseWriter, r *http.Request) error {
 	}
 	return transport.JSON(w, 200, map[string]any{"status": "success", "item_id": i.ID})
 }
+
+func (h Handler) Get(w http.ResponseWriter, r *http.Request) error {
+	id, e := transport.PathID(r, "id")
+	if e != nil {
+		return e
+	}
+	item, e := h.Service.Repo.ByID(r.Context(), id)
+	if e != nil {
+		return e
+	}
+	return transport.JSON(w, 200, item)
+}

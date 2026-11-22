@@ -1,0 +1,430 @@
+[
+  {
+    "time": 1795353333.0002298,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353333.921399,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353334.644379,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353335.884038,
+    "postgres_active": "CPU|active|1\nIO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1\nLock|tuple|2"
+  },
+  {
+    "time": 1795353337.3032901,
+    "postgres_active": "CPU|active|1\nLWLock|WALWrite|1\nLock|transactionid|1\nLock|tuple|14"
+  },
+  {
+    "time": 1795353338.23629,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353339.347873,
+    "postgres_active": "Client|ClientRead|1\nIO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1\nLock|tuple|2"
+  },
+  {
+    "time": 1795353340.332426,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353341.1222742,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353341.882012,
+    "postgres_active": "Client|ClientRead|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353342.64231,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353343.461952,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353344.256953,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353345.074207,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353345.826856,
+    "postgres_active": "CPU|active|1\nIO|WALSync|1"
+  },
+  {
+    "time": 1795353346.551989,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353347.264912,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353347.9846232,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353348.7258701,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353349.5180411,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353350.4163451,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353351.461298,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353352.494682,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353353.22279,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353354.009999,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353354.912319,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353355.678227,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353356.6012359,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353357.377632,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353358.370373,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|3\nLock|transactionid|1\nLock|tuple|4"
+  },
+  {
+    "time": 1795353359.341745,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353360.155093,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353360.964714,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353361.784925,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353362.5460658,
+    "postgres_active": "CPU|active|1"
+  },
+  {
+    "time": 1795353363.416599,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2"
+  },
+  {
+    "time": 1795353364.294688,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353365.128706,
+    "postgres_active": "Lock|transactionid|1"
+  },
+  {
+    "time": 1795353365.976015,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353366.786069,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353367.5015838,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2"
+  },
+  {
+    "time": 1795353368.242823,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353369.191914,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2"
+  },
+  {
+    "time": 1795353370.102856,
+    "postgres_active": "Client|ClientRead|1"
+  },
+  {
+    "time": 1795353371.166949,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|2"
+  },
+  {
+    "time": 1795353372.077588,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353372.969105,
+    "postgres_active": "CPU|active|1"
+  },
+  {
+    "time": 1795353374.086771,
+    "postgres_active": "IO|WALSync|1\nLock|transactionid|1\nLock|tuple|1"
+  },
+  {
+    "time": 1795353375.0125551,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353375.86465,
+    "postgres_active": "CPU|active|1"
+  },
+  {
+    "time": 1795353376.6013298,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353377.7678301,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353378.748918,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353379.914859,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353380.929397,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353382.2978518,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353383.230858,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353384.435711,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353385.4029381,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|3"
+  },
+  {
+    "time": 1795353386.439424,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353387.499394,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353388.296133,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353389.1460621,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353389.918344,
+    "postgres_active": "Client|ClientRead|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353390.7618492,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1\nLock|tuple|4"
+  },
+  {
+    "time": 1795353391.643011,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353392.5626209,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2"
+  },
+  {
+    "time": 1795353393.502351,
+    "postgres_active": "IO|WALSync|1\nLock|transactionid|1\nLock|tuple|1"
+  },
+  {
+    "time": 1795353394.394167,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353395.210073,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353396.031429,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353396.9164329,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353398.148314,
+    "postgres_active": "IO|WALSync|1\nLock|transactionid|1\nLock|tuple|2"
+  },
+  {
+    "time": 1795353398.96178,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353399.73064,
+    "postgres_active": "CPU|active|2\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353400.478834,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353401.512297,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353402.934228,
+    "postgres_active": "CPU|active|1\nIO|WALSync|1\nLock|transactionid|1\nLock|tuple|6"
+  },
+  {
+    "time": 1795353403.915094,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1\nLock|tuple|3"
+  },
+  {
+    "time": 1795353404.915963,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1\nLock|tuple|3"
+  },
+  {
+    "time": 1795353405.8423731,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353406.795707,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353407.6424582,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353408.51321,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353409.437956,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1\nLock|tuple|8"
+  },
+  {
+    "time": 1795353410.200304,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353411.045587,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353411.943135,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2"
+  },
+  {
+    "time": 1795353412.8158,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353413.682688,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1\nLock|tuple|2"
+  },
+  {
+    "time": 1795353414.714779,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353415.6597161,
+    "postgres_active": "IO|WALSync|1"
+  },
+  {
+    "time": 1795353416.497646,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353417.330653,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353418.100188,
+    "postgres_active": "CPU|active|1"
+  },
+  {
+    "time": 1795353419.078988,
+    "postgres_active": "Client|ClientRead|1"
+  },
+  {
+    "time": 1795353419.811009,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|2\nLock|transactionid|1"
+  },
+  {
+    "time": 1795353420.727808,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1\nLock|tuple|1"
+  },
+  {
+    "time": 1795353421.462311,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353422.286637,
+    "postgres_active": "LWLock|WALWrite|1"
+  },
+  {
+    "time": 1795353423.133238,
+    "postgres_active": "IO|WALSync|1\nLWLock|WALWrite|1\nLock|transactionid|1\nLock|tuple|4"
+  },
+  {
+    "time": 1795353424.104853,
+    "postgres_active": "LWLock|WALWrite|2"
+  },
+  {
+    "time": 1795353424.9127119,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353425.656249,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353426.4934568,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353427.288994,
+    "postgres_active": ""
+  },
+  {
+    "time": 1795353428.082399,
+    "postgres_active": ""
+  }
+]

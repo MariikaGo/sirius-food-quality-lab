@@ -69,6 +69,7 @@ func New(ctx context.Context, p *pgxpool.Pool, cfg config.Config) (http.Handler,
 	mux.HandleFunc("POST /users/register", transport.Handle(uh.Register))
 	mux.HandleFunc("POST /users/{id}/topup", guard.Protect(uh.Topup))
 	mux.HandleFunc("GET /users/me", guard.Protect(uh.Me))
+	mux.HandleFunc("GET /menu/items/{id}", transport.Handle(mh.Get))
 	mux.HandleFunc("GET /menu/items", transport.Handle(mh.All))
 	mux.HandleFunc("GET /menu/categories/{id}", transport.Handle(mh.All))
 	mux.HandleFunc("POST /menu/items", guard.Protect(mh.Create, "cook", "admin"))
