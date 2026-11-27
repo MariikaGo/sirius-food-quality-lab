@@ -143,6 +143,15 @@ services:
     image: jaegertracing/jaeger:2.16.0
     ports:
       - "127.0.0.1:16686:16686"
+  locust:
+    image: locustio/locust:2.47.0
+    profiles: [load]
+    command: ["-f", "/load/locustfile.py", "--host", "http://api:8000"]
+    ports: ["127.0.0.1:8089:8089"]
+    volumes:
+      - ./load:/load:ro
+      - ./evidence:/evidence
+
 volumes:
   pg_data:
   redis_data:

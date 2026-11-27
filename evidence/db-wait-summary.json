@@ -1,0 +1,8 @@
+{
+  "CPU/active": 10,
+  "IO/WALSync": 50,
+  "LWLock/WALWrite": 52,
+  "Lock/transactionid": 30,
+  "Lock/tuple": 57,
+  "Client/ClientRead": 5
+}
